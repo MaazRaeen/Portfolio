@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>Maaz Raeen — Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="site">
+
+    <!-- corner profile photo -->
+    <!-- <div class="corner-photo" title="Profile photo">
+      <img src="./asset/MaazImg.jpg" alt="profile" />
+    </div> -->
+
+    <header>
+      <div class="brand">
+        <div class="logo">MR</div>
+        <div>
+          <h1>Maaz Raeen</h1>
+          <div style="font-size:12px;color:var(--muted)">Engineering Student · Web Developer</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#tech">Tech Stack</a>
+        <a href="#projects">Projects</a>
+        <a href="./asset/Maaz Raeen Resume..pdf">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <script><button id="themeToggle" class="btn" style="margin-left:16px">🌙</button></script>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="intro">
+        <h2>Hi, I'm Maaz 👋</h2>
+        <p class="lead">I build clean and usable web experiences — with HTML, CSS and JavaScript. Currently studying engineering and building projects around web & machine learning.</p>
+        <div class="hero-actions">
+          <a class="btn primary" id="downloadResumeBtn" href="./asset/Maaz Raeen Resume..pdf" download>Download Resume</a>
+          <button class="btn" id="contactMeBtn">Contact Me</button>
+        </div>
+      </div>
+
+      <div style="width:300px;background:var(--panel);padding:18px;border-radius:12px">
+        <h3 style="font-family:Montserrat;margin-bottom:10px">Highlights</h3>
+        <ul style="color:var(--muted);list-style:none;padding-left:0">
+          <li>• Web development (HTML/CSS/JS)</li>
+          <li>• Projects: Dashboards, Recommendation Systems</li>
+          <li>• Comfortable with Git & deployments</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about section">
+      <div class="photo">
+        <img src="./asset/MaazImg.jpg" alt="Maaz Raeen" />
+      </div>
+      <div class="bio">
+        <h3>About Me</h3>
+        <p>Hello! I'm Maaz Raeen — an engineering student with a passion for building web applications and exploring machine learning. I like to convert ideas into polished projects and focus on clean UI, responsive design, and good user experience.</p>
+        <p style="margin-top:10px;color:var(--muted)">Interests: Web Development, MLOps, Data Visualisation, Open Source.</p>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section id="tech" class="section">
+      <h3>Tech Stack</h3>
+      <div class="tech-grid">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">Git</div>
+        <div class="skill">Vercel</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h3>Projects</h3>
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <div class="thumb"><img src="./assets/project1.png" alt="project 1" style="width:100%;height:100%;object-fit:cover"/></div>
+          <div class="content">
+            <h4>Marketing Dashboard</h4>
+            <p>React-free marketing analytics dashboard built with Vite + vanilla JS. Real-time stats and charts.</p>
+            <div class="project-meta">
+              <span class="chip">HTML • CSS • JS</span>
+              <a class="btn" href="#" onclick="openLink(event,'https://github.com/yourname/project1')">View</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="thumb"><img src="assets/project2.png" alt="project 2" style="width:100%;height:100%;object-fit:cover"/></div>
+          <div class="content">
+            <h4>E‑commerce Recommender</h4>
+            <p>A recommendation system demo + front-end to showcase model predictions and evaluation.</p>
+            <div class="project-meta">
+              <span class="chip">Python • JS</span>
+              <a class="btn" href="#" onclick="openLink(event,'https:github.com/MaazRaeen')">View</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="thumb"><img src="assets/project3.png" alt="project 3" style="width:100%;height:100%;object-fit:cover"/></div>
+          <div class="content">
+            <h4>Personal Site (This)</h4>
+            <p>Portfolio site (HTML/CSS/JS) — lightweight and easy to host on static hosting providers.</p>
+            <div class="project-meta">
+              <span class="chip">HTML • CSS • JS</span>
+              <a class="btn" href="#" onclick="openLink(event,'https:hobit-dashboard-maazraeens-projects.vercel.app/')">Live</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="section">
+      <h3>Resume</h3>
+      <div class="resume-card">
+        <label for="resumeUpload" class="btn" style="cursor:pointer">Upload Resume (PDF)</label>
+        <input id="resumeUpload" type="file" accept="application/pdf" />
+        <div id="resumeInfo" style="color:var(--muted);font-weight:600">No resume uploaded</div>
+        <div style="margin-left:auto;display:flex;gap:8px">
+          <a id="downloadLink" class="btn" href="assets/resume.pdf" download>Download</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h3>Contact</h3>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:12px">
+        <div>
+          <div style="font-weight:700">Phone</div>
+          <a href="tel:+911234567890" style="color:var(--muted);text-decoration:none">+91 12345 67890</a>
+
+          <div style="margin-top:12px;font-weight:700">Email</div>
+          <a href="mailto:MaazRaeen42@gmail.com" style="color:var(--muted);text-decoration:none">MaazRaeen42@gmail.com</a>
+        </div>
+
+        <div>
+          <div style="font-weight:700">Social</div>
+          <div class="socials" style="margin-top:8px">
+            <a href="https://github.com/MaazRaeen" target="_blank">GH</a>
+            <a href="https://linkedin.com/in/MaazRaeen" target="_blank">LI</a>
+            <a href="https://leetcode.com/" target="_blank">LC</a>
+          </div>
+        </div>
+
+        <div style="min-width:300px">
+          <div style="font-weight:700;margin-bottom:8px">Message</div>
+          <textarea id="message" rows="4" placeholder="Say hi — opens your email client when submitted" style="width:100%;background:var(--panel);border-radius:8px;border:none;padding:10px;color:var(--text)"></textarea>
+          <div style="display:flex;justify-content:flex-end;margin-top:8px">
+            <button class="btn primary" id="sendMail">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2025 Maaz Raeen</div>
+      <div style="color:var(--muted)">Let's Built🧑🏻‍💻</div>
+    </footer>
+
+  </div>
+
+ <script src="javaScript.js"></script>
+
+</body>
+</html>
